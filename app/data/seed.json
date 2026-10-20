@@ -1,0 +1,147 @@
+{
+  "users": {
+    "alice": "payments",
+    "dave": "payments",
+    "bob": "hr",
+    "carol": "platform"
+  },
+  "quotas": {
+    "payments": { "max_vcpu": 40, "max_memory_gb": 160, "max_vms": 10 },
+    "hr": { "max_vcpu": 24, "max_memory_gb": 96, "max_vms": 6 },
+    "platform": { "max_vcpu": 32, "max_memory_gb": 128, "max_vms": 8 }
+  },
+  "vms": [
+    {
+      "name": "payments-api-prod-01",
+      "app_name": "payments-api",
+      "environment": "prod",
+      "status": "running",
+      "size": "large",
+      "os": "RHEL 9",
+      "ip": "10.10.1.11",
+      "cluster": "cl-prod-a",
+      "owner_team": "payments",
+      "created_at": "2025-03-14T09:12:00Z"
+    },
+    {
+      "name": "payments-api-prod-02",
+      "app_name": "payments-api",
+      "environment": "prod",
+      "status": "running",
+      "size": "large",
+      "os": "RHEL 9",
+      "ip": "10.10.1.12",
+      "cluster": "cl-prod-b",
+      "owner_team": "payments",
+      "created_at": "2025-03-14T09:15:00Z"
+    },
+    {
+      "name": "payments-api-dev-01",
+      "app_name": "payments-api",
+      "environment": "dev",
+      "status": "running",
+      "size": "small",
+      "os": "RHEL 9",
+      "ip": "10.20.1.21",
+      "cluster": "cl-nonprod-a",
+      "owner_team": "payments",
+      "created_at": "2025-06-02T14:30:00Z"
+    },
+    {
+      "name": "checkout-web-prod-01",
+      "app_name": "checkout-web",
+      "environment": "prod",
+      "status": "running",
+      "size": "medium",
+      "os": "Ubuntu 24.04",
+      "ip": "10.10.2.11",
+      "cluster": "cl-prod-a",
+      "owner_team": "payments",
+      "created_at": "2025-08-21T08:00:00Z"
+    },
+    {
+      "name": "checkout-web-test-01",
+      "app_name": "checkout-web",
+      "environment": "test",
+      "status": "stopped",
+      "size": "small",
+      "os": "Ubuntu 24.04",
+      "ip": "10.30.2.11",
+      "cluster": "cl-nonprod-a",
+      "owner_team": "payments",
+      "created_at": "2025-09-10T11:45:00Z"
+    },
+    {
+      "name": "payroll-01",
+      "app_name": "payroll",
+      "environment": "prod",
+      "status": "running",
+      "size": "medium",
+      "os": "Windows Server 2022",
+      "ip": "10.10.3.11",
+      "cluster": "cl-prod-a",
+      "owner_team": "hr",
+      "created_at": "2024-11-05T10:00:00Z"
+    },
+    {
+      "name": "payroll-02",
+      "app_name": "payroll",
+      "environment": "prod",
+      "status": "running",
+      "size": "medium",
+      "os": "Windows Server 2022",
+      "ip": "10.10.3.12",
+      "cluster": "cl-prod-b",
+      "owner_team": "hr",
+      "created_at": "2024-11-05T10:20:00Z"
+    },
+    {
+      "name": "payroll-dev-01",
+      "app_name": "payroll",
+      "environment": "dev",
+      "status": "running",
+      "size": "small",
+      "os": "Windows Server 2022",
+      "ip": "10.20.3.11",
+      "cluster": "cl-nonprod-a",
+      "owner_team": "hr",
+      "created_at": "2025-01-20T13:00:00Z"
+    },
+    {
+      "name": "hr-portal-test-01",
+      "app_name": "hr-portal",
+      "environment": "test",
+      "status": "provisioning",
+      "size": "small",
+      "os": "Ubuntu 24.04",
+      "ip": null,
+      "cluster": "cl-nonprod-a",
+      "owner_team": "hr",
+      "created_at": "2026-10-19T08:00:00Z"
+    },
+    {
+      "name": "gitlab-runner-01",
+      "app_name": "gitlab-runner",
+      "environment": "prod",
+      "status": "running",
+      "size": "large",
+      "os": "Ubuntu 24.04",
+      "ip": "10.10.9.11",
+      "cluster": "cl-prod-a",
+      "owner_team": "platform",
+      "created_at": "2024-07-01T07:30:00Z"
+    },
+    {
+      "name": "monitoring-01",
+      "app_name": "monitoring",
+      "environment": "prod",
+      "status": "running",
+      "size": "medium",
+      "os": "Ubuntu 24.04",
+      "ip": "10.10.9.21",
+      "cluster": "cl-prod-b",
+      "owner_team": "platform",
+      "created_at": "2024-07-01T08:00:00Z"
+    }
+  ]
+}
